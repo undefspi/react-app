@@ -13,7 +13,7 @@ class App extends React.Component{
 
 
   setStateHandler(){
-    var item = "setState...."
+    var item = "setState....poooo"
     var myArray = this.state.data;
     myArray.push(item)
     this.setState({data: myArray})
