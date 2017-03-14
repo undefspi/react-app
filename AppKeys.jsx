@@ -1,4 +1,5 @@
 import React from 'react';
+import { testingMaps } from './AppMap'
 
 class App extends React.Component{
   constructor(){
@@ -23,14 +24,17 @@ class App extends React.Component{
           }
         ]
     }
+
+    testingMaps();
   }
 
   render(){
     return(
       <div>
           <div>
-              {this.state.data.map((dynamicComponent, i) => <Content
-                key = {i} componentData = {dynamicComponent}/>)}
+              {this.state.data.map(
+                (dynamicComponent, i) => <Content key = {i} componentData = {dynamicComponent}/>)
+              }
           </div>
       </div>
     );
@@ -48,9 +52,9 @@ class Content extends React.Component{
   }
   render(){
     const {component, id, name} = this.props.componentData
-    console.log("props = " + this.props.componentData)
-    var props = this.props.componentData
-    console.log(props)
+    // console.log("props = " + this.props.componentData)
+    // var props = this.props.componentData
+    // console.log(props)
 
     return(
       <div>
